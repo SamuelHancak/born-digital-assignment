@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-common-first: #1f1b20;
+  --color-common-second: #342e34;
+  --color-common-third: #6c626c;
+  --color-common-fourth: #8e848f;
+  --color-common-fifth: #b8b3b8;
+  --color-common-sixth: #d3d1d3;
+  --color-common-seventh: #e8e7e8;
+  --color-common-eighth: #f5f4f5;
+  --color-common-ninth: #fcfbfc;
+
+  --color-primary-first: #4f1650;
+  --color-primary-second: #8b268d;
+  --color-primary-third: #d257f3;
+  --color-primary-fourth: #dd86df;
+  --color-primary-fifth: #edc0ee;
+  --color-primary-sixth: #f7d4f5;
+  --color-primary-seventh: #f9ebfa;
+
+  --rotate-135: 135deg;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50% {
+    transform: translateX(-2px);
+  }
+  20%, 40%, 60% {
+    transform: translateX(2px);
+  }
+  70%, 90% {
+    transform: translateX(-1px);
+  }
+  80% {
+    transform: translateX(1px);
+  }
+}
+
+@keyframes ring {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(221, 134, 223, 0);
+  }
+  15% {
+    box-shadow: 0 0 0 3px rgba(221, 134, 223, 0.6);
+  }
+  30% {
+    box-shadow: 0 0 0 6px rgba(221, 134, 223, 0.4);
+  }
+  45% {
+    box-shadow: 0 0 0 3px rgba(221, 134, 223, 0.2);
+  }
+  60% {
+    box-shadow: 0 0 0 0 rgba(221, 134, 223, 0);
+  }
+}
+
+.hover-ring:hover {
+  animation: shake 1.5s cubic-bezier(0.36, 0, 0.66, 1) infinite, ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
